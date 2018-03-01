@@ -1,0 +1,131 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #1ab0ad;
+}
+.container{
+    text-align: center;
+}
+.slider-container{
+    margin: 0 auto;
+    display: inline-block;
+    padding: 100px 300px;
+}
+.slider-container div{
+    display: inline-block;
+    border: 3px solid #97e1dc;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    height: 133px;
+    margin: 0px 30px;
+}
+.slider-container div:hover{
+    border: 3px solid white;
+}
+.slide{
+    position: relative;
+    top: -36px;
+}
+.slide:hover{
+    transform: translate(0px, -20px) scale(1.2);
+    transition: all 0.3s ease-out;
+}
+
+.display-none{
+    display: none;
+}
+
+.slide-right{
+     transform: translate(81.5px, 0);
+     transition: all 1s linear;
+ }
+.slide-right-disappear{
+    animation: disappear 1s forwards;
+    -moz-animation: disappear 1s forwards;
+    -webkit-animation: disappear 1s forwards;
+    animation-direction: normal;
+    transform: translate(163px, 0) scale(2);
+    transition: all 1s linear;
+}
+@keyframes disappear {
+     0% {opacity: 1}
+     100% {opacity: 0}
+}
+
+.slide-right-appear{
+    animation: rightappear 1s forwards;
+    -moz-animation: rightappear 1s forwards;
+    -webkit-animation: rightappear 1s forwards;
+    animation-direction: normal;
+    transition: all 1s linear;
+    display: inline-block!important;
+}
+@keyframes rightappear {
+    0% {opacity: 0; transform: translate(-163px, 0) scale(2)}
+    100% {opacity: 1; transform: translate(81.5px, 0) scale(1)}
+}
+.slide-left{
+    transform: translate(-81.5px, 0);
+    transition: all 1s linear;
+}
+.slide-left-disappear{
+    animation: disappear 1s forwards;
+    -moz-animation: disappear 1s forwards;
+    -webkit-animation: disappear 1s forwards;
+    animation-direction: normal;
+    transform: translate(-163px, 0) scale(2);
+    transition: all 1s linear;
+}
+
+.slide-left-appear{
+    animation: leftappear 1s forwards;
+    -moz-animation: leftappear 1s forwards;
+    -webkit-animation: leftappear 1s forwards;
+    animation-direction: normal;
+    transition: all 1s linear;
+    display: inline-block!important;
+}
+@keyframes leftappear {
+    0% {opacity: 0; transform: translate(163px, 0) scale(2)}
+    100% {opacity: 1; transform: translate(-81.5px, 0) scale(1)}
+}
+
+/*Nav buttons*/
+.button-container{
+    position: relative;
+    top: -200px;
+}
+.button{
+    background-color: transparent;
+    background-position-x: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px 60px;
+    border: none;
+}
+.button:focus {outline:0;}
+.back-button{
+    background-image:  url("images/back.png");
+    background-repeat: no-repeat;
+    float: left;
+}
+.back-button:hover{
+    background-image:  url("images/back-hover.png");
+    color: #1ab0ad;
+}
+
+.next-button{
+    background-image:  url("images/next.png");
+    background-repeat: no-repeat;
+    float: right;
+}
+.next-button:hover{
+    background-image:  url("images/next-hover.png");
+    color: #1ab0ad;
+}
